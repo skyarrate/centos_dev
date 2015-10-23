@@ -5,7 +5,7 @@ RUN useradd rujie
 RUN echo 'root:111111' | chpasswd
 RUN echo 'rujie:rujie' | chpasswd
 RUN yum install -y openssh-server
-EXPOSE 22
+EXPOSE 8022
 EXPOSE 8080
 RUN echo 'OPTIONS=-D' >>/etc/sysconfig/sshd
 RUN yum install -y python-setuptools nginx
